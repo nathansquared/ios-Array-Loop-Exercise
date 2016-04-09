@@ -8,14 +8,34 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
     
-    var oddNumber = [String]()
+    
+ 
+    
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        var oddNumber = [Int]()
+        var sums = [Int]()
+        
+        for x in 0...100 {
+            if x % 2 != 0 {
+                oddNumber.append(x)
+            }
+        }
+        
+        for num in oddNumber {
+            
+            sums.append(num + 5)
+        }
+        
+        print(sums)
+        
     }
 
     override func didReceiveMemoryWarning() {
